@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 
 gem 'magic_encoding'
 gem 'russian'
-gem 'netzke-core', :git => "git://github.com/skozlov/netzke-core.git", :branch => "rails3"
-gem 'netzke-basepack', :git => "git://github.com/skozlov/netzke-basepack.git", :branch => "rails3"
+gem 'netzke-core', :git => "git://github.com/skozlov/netzke-core.git"
+gem 'netzke-basepack', :git => "git://github.com/skozlov/netzke-basepack.git"
 gem 'will_paginate'
 gem "jquery-rails"
 gem 'rails3-jquery-autocomplete'
