@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'mysql'
 gem 'magic_encoding'
 gem 'russian'
 gem 'netzke-core', :git => "git://github.com/skozlov/netzke-core.git"
