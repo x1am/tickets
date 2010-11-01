@@ -1,0 +1,12 @@
+<h2>Hello, <%=current_user.email%></h2>
+<br />
+<strong>Userinfo:</strong><br />
+<% current_user.userinfo.each do |i| %>
+  <%= i.name %><br />
+<% end %>
+<!-- <form action="/profile/<%=current_user.id%>/update" method="post"> -->
+<% form_for current_user do |f| %>
+<input type="text" name="userinfo_new">
+<input type="submit" value="add" />
+</form>
+<% end %>

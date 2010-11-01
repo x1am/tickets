@@ -1,0 +1,18 @@
+<style>
+form {margin: 0px;padding: 0px;}
+</style>
+<h2>Hello, <%=current_user.email%></h2>
+<br />
+<strong>Userinfo:</strong><br />
+<% current_user.userinfo.each do |i| %>
+  <% form_for current_user do |ff|%>
+		<%= ff.submit :x%> <%=i.name%>: <%=i.description%>
+                <%= hidden_field_tag :tag_id, i.id %>
+		<%= hidden_field_tag :userinfo_del, i.id%>
+	<%end%>
+<% end %>
+<% form_for current_user do |f| %>
+	<input type="text" name="userinfo_new">
+	<input type="submit" value="add" />
+<% end %>
+

@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html> 
+<head>
+  <title>Tickets</title>
+  <%= stylesheet_link_tag "jquery-ui-smoothness.css", "table.css", "elastic.css", "application.css", :cache => true %>
+  <%= javascript_include_tag :defaults, "autocomplete-rails.js", "jquery.dataTables.min.js", "elastic.js", :cache => true %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+
+<div id="header">
+  <div class="span-24 last">
+    <%= render :partial => 'layouts/header' %>
+  </div>
+</div>
+<div class="unit on-3 columns">
+  <div class="fixed column"><%= render :partial => 'layouts/left' %></div>
+  <div class="elastic column"><div style="padding: 0 10px 0 10px;">
+    <%=yield%></div>
+    </div>
+  <div class="fixed column"><%= render :partial => 'layouts/right' %></div>
+</div>
+
+</body>
+</html>

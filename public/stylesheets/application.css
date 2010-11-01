@@ -1,0 +1,24 @@
+.wide { width: 100%; border: 1px solid; }
+
+.frame { border: 3px solid #ccc; padding: 5px; background-color: #fff; }
+.thinframe { border: 1px dotted #ccc; padding: 5px; background-color:#f5f5dc;}
+.bottomline { border-bottom: 1px dotted #ccc; padding: 0; }
+input[type=text] { border: 1px inset; }
+#left {width: 150px;}
+#right {width: 150px;}
+.container { padding: 5px;}
+p {margin: 0;}
+hr { border: 0; height: 1px; background-color: #ccc; }
+#logo {float:left; font-size: 16pt;font-weight:bold; font-family: arial; line-height: 50px;}
+#user_nav {float:right; line-height: 50px;}
+.notice {display:none;position:absolute;top: 5px; right: 30%;left:30%; text-align: center; -moz-border-radius: 5px; border-radius: 5px; height: 30px; line-height: 30px;}
+#alert {border: 1px solid; background-color: #fcc;}
+#notice {border: 1px solid; background-color: #cfc;}
+a {text-decoration: none;}
+.heading {font-size: 12pt; font-weight: bold; }
+h1 {font-size: 18pt; font-weight: bold; line-height: 1px; margin: 10px 0 10px 0; }
+h2 {font-size: 15pt; font-weight: bold; line-height: 1px; margin: 10px 0 10px 0; }
+h3 {font-size: 11pt; font-weight: bold; line-height: 1px; margin: 10px 0 10px 0; }
+#left_block {float:left;position: absolute;top: 0px; left: 0px;top:0px; min-height:100%; height: auto; width: 200px;border: 1px solid;}
+#header {height: 50px;border-bottom: 1px solid;margin-bottom: 10px; background-color: #eef;}
+.border {border: 1px solid;}

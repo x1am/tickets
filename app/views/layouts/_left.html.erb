@@ -1,0 +1,8 @@
+<div id="left">
+<% if user_signed_in? %>
+<a href="/profile">Ваш профиль</a><br />
+<hr />
+<% end %> 
+<%= render :partial => 'left' rescue nil %>
+</div>
+

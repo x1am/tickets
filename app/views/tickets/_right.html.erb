@@ -1,0 +1,5 @@
+<% @ticket = Ticket.find params[:id]  %>
+Ответственные:
+<ul>
+<%= raw @ticket.users.collect{|user| "<li><a href='/users/#{user.id}'>#{user.email}</a></li>"}.join("\n") %>
+</ul>

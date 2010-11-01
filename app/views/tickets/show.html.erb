@@ -1,0 +1,31 @@
+<h1>Тикет #<%= @ticket.id %></h1>
+<div class="thinframe">
+  <div class="unit on-2 columns">
+    <div class="column">
+      <h2><%= @ticket.updates.first.subject %></h2>
+    </div>
+    <div class="column" style="text-align: right;">
+      Создан <%= raw reltime @ticket.created_at %>
+      <br/>
+      Изменен <%= raw reltime @ticket.updates.last.created_at %>
+      <br/>
+    </div>
+  </div>
+  <% if @ticket.tag_list.count > 0 %>
+    Метки: <%= raw @ticket.tag_list.sort.collect { |tag| "<a href='/tag/#{tag}'>#{tag}</a>" }.join(', ') %>
+  <% end %>
+  <hr />
+  <%= simple_format @ticket.updates.first.body %>
+</div>
+<br/>
+<% @ticket.updates.each do |u| -%>
+    <%= render :partial => 'update', :locals =>{:u => u} unless u == @ticket.updates.first %>
+<% end -%>
+
+<% form_for @ticket.updates.new do |f| %>
+    Add comment:<br/>
+    <%= f.hidden_field :author_id, :value => current_user.id %>
+    <%= f.hidden_field :ticket_id, :value => @ticket.id %>
+    <%= f.text_area :body, :rows => 5 %><br />
+    <%= f.submit %>
+<% end %>

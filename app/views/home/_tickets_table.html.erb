@@ -1,0 +1,19 @@
+<table id="<%=table_id%>" class="display datatable" >
+  <thead>
+   <tr>
+    <th>ID</th>
+    <th width="100%":>Тема</th>
+    <th>Метки</th>
+   </tr>
+  </thead>
+  <tbody>
+  <% tickets.each do |t| %>
+    <tr>
+      <td align="center"><a href="/tickets/<%= t.id %>"><%= t.id %></a></td>
+      <td><a href="/tickets/<%= t.id %>"><%= t.updates.first.subject %></a></td>
+      <td><%= raw t.tag_list.sort.collect{|tag| "<a href='/tag/#{tag}'>#{tag}</a>"}.join(', ') %> </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

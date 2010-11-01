@@ -1,0 +1,6 @@
+<font class="heading">Ваши тикеты</font>
+<%= render :partial => 'tickets_table', :locals => { :tickets => @assigned, :table_id => 'assigned_tickets' } %>
+<br />
+<font class="heading">Найденные по меткам</font>
+<%= render :partial => 'tickets_table', :locals => { :tickets => @related, :table_id => 'related_tickets' } %>
+

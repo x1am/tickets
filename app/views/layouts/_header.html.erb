@@ -1,0 +1,12 @@
+    <div id="logo" class="heading"><a href="/">tickets</a></div>
+    <div id="user_nav">
+      <% if user_signed_in? %>
+        Вы вошли как <%= current_user.email %>.
+        <%= link_to "Выйти", destroy_user_session_path %>
+      <% else %>
+        <%= link_to "Вход", new_user_session_path %>
+      <% end %>
+    </div>
+    <div class="notice" id="alert"><%=alert%></div>
+    <div class="notice" id="notice"><%=notice%></div>
+
