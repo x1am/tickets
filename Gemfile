@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'pg'
 gem 'mysql'
 gem 'magic_encoding'
 gem 'russian'
