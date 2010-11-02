@@ -1,4 +1,4 @@
-  <h3>&nbsp; <a href="/users/<%=u.author.id%>"><%= u.author.email %></a> <%= raw u.created_at %></h3>
+  <h3>&nbsp; <a href="/users/<%=u.author.id%>"><%= u.author.email %></a> <%= raw reltime u.created_at %></h3>
   <div class="thinframe">
     <%= simple_format u.body %>
   </div>
